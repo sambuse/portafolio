@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0e1a24;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    gap: 30px;
+    background: linear-gradient(135deg, #16222a, #3a6073);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.profile {
+    width: 35%;
+    text-align: center;
+}
+
+.profile img {
+    width: 140px;
+    border-radius: 50%;
+    border: 4px solid #ff4d8d;
+}
+
+.profile h1 {
+    margin-top: 15px;
+}
+
+.profile h2 {
+    color: #ff4d8d;
+    font-weight: normal;
+}
+
+.about {
+    width: 65%;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.box {
+    background: #16222a;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.box h3 {
+    margin-bottom: 15px;
+    color: #ff4d8d;
+}
+
+/* SKILLS */
+.skills {
+    margin-top: 30px;
+    background: #16222a;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.bar {
+    background: #2c3e50;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.level {
+    height: 100%;
+    background: linear-gradient(90deg, #ff4d8d, #ff9a8b);
+}
+
+/* niveles */
+.level-50 { width: 50%; }
+.level-55 { width: 55%; }
+.level-40 { width: 40%; }
+.level-50 { width: 50%; }
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #aaa;
+}
+/* IMÁGENES DE PROYECTOS */
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.project-images img {
+    width: 100%;
+    height: 160px;       /* tamaño controlado */
+    object-fit: cover;  /* recorta sin deformar */
+    border-radius: 8px;
+}
+@media (max-width: 600px) {
+    .project-images {
+        grid-template-columns: 1fr;
+    }
+
+    .project-images img {
+        height: 180px;
+    }
+}
+.project-images img {
+    transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+    transform: scale(1.03);
+}
+/* MINIATURAS */
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.project-images img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* MODAL ZOOM */
+.img-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.img-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Mostrar modal */
+.img-modal:target {
+    display: flex;
+}
+
+/* Botón cerrar */
+.img-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
